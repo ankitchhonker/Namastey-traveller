@@ -1,0 +1,72 @@
+<% layout("layouts/boilerplate")%>
+<body>
+    <form action="/listings" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+
+        <div>
+
+             <label for="title"><b>Title</b></label>
+            <input type="text" name="listing[title]" placeholder="Enter Title" id="title" class="form-control" required>
+            <div class="invalid-feedback">please fill this title</div>
+
+        </div>
+     
+        <div>
+            <label for="description"><b>Description</b></label>
+            <textarea name="listing[description]" placeholder="Enter some description.." id="description" class="form-control" required></textarea> 
+            <div class="invalid-feedback">please write the short description </div>
+
+
+        </div>
+
+        
+
+        <div>
+            <label for="image"> <b>Upload Image</b></label>
+             <input type="file" name="listing[image]" id="image" class="form-control" required>
+             <div class="invalid-feedback">please choose the file image</div>
+
+        </div>
+
+        <div>
+            <label for="category"><b>Choose category</b></label>
+            <select name="listing[category]" id="category" class="form-control" required>
+                <option value="Beachfront">Beachfront</option>
+                <option value="Lakefronts">Lakefronts</option>
+                <option value="trending">trending</option>
+                <option value="Mountains">Mountains</option>
+                <option value="Treehouse">Tree house</option>
+                <option value="Cabin">Cabin</option>
+                <option value="Castles">Castles</option>
+                <option value="Cottage">Cottage</option>
+                <option value="Historicalhomes">Historicalhomes</option>
+                <option value="Beach">Beach</option>
+                <option value="Rooms">Rooms</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="Enter price"><b>Price</b></label>
+            <input type="text" name="listing[price]" placeholder="Enter price" id="Enter price" class="form-control" required>
+            <div class="invalid-feedback">please enter the price</div>
+        </div> 
+
+        <div>
+            <label for="location"><b>Location</b></label>
+            <input type="text" name="listing[location]" placeholder="Enter Location"  id="location" class="form-control" required>
+            <div class="invalid-feedback">please enter the current location</div>
+        </div>
+
+        <div>
+
+            <label for="country"><b>Country</b></label>
+            <input type="text" name="listing[country]" placeholder="Enter country" id="country" class="form-control" required>
+            <div class="invalid-feedback">please enter the country</div>
+
+        </div>
+    
+      
+         <button class="submit" type="submit">Add</button>
+    </form>
+    
+</body>
+ 

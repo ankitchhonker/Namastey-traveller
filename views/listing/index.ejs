@@ -1,0 +1,125 @@
+ <% layout("layouts/boilerplate")%>
+ 
+ <style>
+  .card{
+    border: none;
+  }
+ </style>
+  
+   <%=success %>
+   <!-- <h2>All Listing Details</h2> -->
+   <div class="filter-arrow-container">
+    
+    <!-- <div  class="filter-arrow-left"><i class="fas fa-chevron-left"></i></div> -->
+
+    <div class="filters">
+
+      <a href="/listings/category/trending">
+        <div id="filter">
+          <div><i class="fa-solid fa-fire"></i></div>
+          <p>trending</p>
+        </div>
+      </a>
+      
+      <a href="/listings/category/Beach"><div id="filter">
+        <div><i class="fa-solid fa-umbrella-beach"></i></div>
+        <p>Beach</p>
+      </div>
+      </a>
+      
+
+      <a href="/listings/category/Amazing pools">
+        <div id="filter">
+          <div><i class="fa-solid fa-person-swimming"></i></div>
+          <p>Amazing Pools</p>
+        </div>
+  
+      </a>
+      
+
+     <a href="/listings/category/Lakefronts">
+      <div id="filter">
+        <div><i class="fa-solid fa-water"></i></div>
+        <p>Lakefronts</p>
+      </div>
+    </a> 
+
+    <a href="/listings/category/Treehouse">
+      <div id="filter">
+        <div><i class="fa-solid fa-tree"></i></div>
+        <p>Tree house</p>
+      </div>
+    </a> 
+ 
+
+    <a href="/listings/category/Rooms">
+      <div id="filter">
+        <div><i class="fa-solid fa-bed"></i></div>
+        <p>Rooms</p>
+      </div>
+    </a> 
+ 
+       <a href="/listings/category/Historicalhomes">
+        <div id="filter">
+          <div><i class="fa-solid fa-monument"></i></div>
+          <p>Historical homes</p>
+        </div>
+       </a>
+
+       <a href="/listings/category/Mountains">
+        <div id="filter">
+          <div><i class="fa-solid fa-monument"></i></div>
+          <p>Mountains Homes</p>
+        </div>
+       </a>
+     
+
+      <a href="/listings/category/Castles">
+        <div id="filter">
+          <div><i class="fa-regular fa-castle"></i></div>
+          <p>Castles</p>
+        </div>
+      </a>
+
+      
+
+
+     </div>
+          
+         <div class="form-check-reverse form-switch">
+          <label class="form-check-label mb-3 " for="flexSwitchCheckDefault">Enable Taxes</label>
+          <input class="form-check-input mb-1 " type="checkbox" role="switch" id="flexSwitchCheckDefault">
+          
+        </div>
+    
+</div>
+     
+    
+   <div class="container">
+      <div class="row">
+        <% for(let listing of alllistings){ %>
+          <a href="/listings/<%= listing._id %>">
+          <div class="card  col-sm-6 col-md-4 col-lg-4 mb-4 mt-3 " >
+            <div class="  h-100">
+           
+               <div class="card-img-container h-55">
+                  <a href="/listings/<%= listing._id %>">   <img src="<%= listing.image.url %>" class="card-img-top img-fluid  " alt="image"> </a>
+                 
+               </div>
+              <div class="card-body d-flex flex-column">
+              <a href="/listings/<%= listing._id %>"> <b><p class="card-text"><%= listing.title %></p></b></a> 
+              <a href="/listings/<%= listing._id %>"> <p class="card-text mt-auto">₹<%=listing.price %>/night <i class="tax-info">&nbsp;   +18% GST</i> </p></a>
+             
+              </div>
+            </div>
+          </div>
+        </a>
+        <% } %>
+      </div>
+    </div>
+     
+    
+            
+       
+ 
+ 

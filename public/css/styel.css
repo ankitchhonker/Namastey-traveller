@@ -1,0 +1,275 @@
+ 
+
+ .navbar{
+    height: 5rem;
+    background-color: white;
+ }
+
+ .fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+ }
+
+ .nav-link{
+    color: #222222 !important;
+ }
+
+ footer{
+   display: flex;
+   height: 8rem;
+   background-color: #ebebeb;
+    margin-top: 2rem;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 2rem;
+ }
+
+ .f-socials{
+  font-size: 1.5rem;
+  margin-left: 0.5;
+  margin-top: 0.5rem;
+ }
+
+ .f-links{
+   margin:0.3rem;
+
+ }
+  
+
+ div  a{
+   text-decoration: none;
+   margin:0.3rem;
+   color: black;
+   font-size: 100%;
+ }
+ .contaier{
+  flex: 1;
+ }
+ div  a:hover{
+   text-decoration: underline;
+ }
+ .img-div{
+  height: 100vh;
+  width: 100%;
+  margin: 1rem;
+ }
+
+ .img-div img{
+  height: 50%;
+  width: 60%;
+  margin: 1rem;
+  border-radius: 1rem;
+  display: block;
+
+ }
+ .btn-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20% ; 
+  flex-wrap: wrap; 
+}
+
+.btn-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.submit {
+  padding: 0.5rem;
+  height: 3rem;
+  width: 1.5rem;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.submit.edit {
+  background-color:  #f44336;  
+  color: white;
+}
+
+.submit.delete {
+  background-color: #f44336;  
+  color: white;
+}
+ 
+@media (max-width: 600px) {
+  .btn-container {
+      flex-basis: 100%;
+      margin-bottom: 10px;
+  }
+
+  .submit {
+      width: 100%;
+  }
+}
+.review-delete{
+   color: black;
+  background-color: white;
+  border: none;
+  margin-left: 100%;
+}
+ .fa-star{
+  color: rgb(255, 217, 0);
+ }
+.submit a {
+  text-decoration: none;
+  color: inherit;
+  display: block; 
+}
+
+ .card-img-container {
+  height: 11rem;  
+  overflow: hidden;
+}
+ 
+ 
+ .card-img-top {
+  height: 11rem;
+  width: 100%;
+border-radius: 1rem;
+}
+
+ 
+.card-img-top :hover{
+ opacity: 0.5;
+}
+  
+
+
+.submit {
+  background-color:   #fe424d;
+  margin-top: 2rem;
+  border: none;
+  width: 4rem;
+  color: white;
+  border-radius: 0.3rem;
+}
+form{
+  margin-left: 10%;
+  width: 80%;;
+}
+.form-control{
+  margin-top: 1rem;;
+}
+label{
+  margin-top: 1rem;
+  display: inline;
+}
+.prev-image{
+  margin-top: 0.6rem;
+  border-radius: 0.5rem;
+  box-shadow: 10x 10x 5px;
+}
+
+ .prev-image-box{
+  margin-top: 0.6rem;
+  display: flex;
+  flex-direction: column;
+ }
+
+ .filters{
+  /*  */
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+  white-space: nowrap;
+  align-items: center;
+
+  /* display: flex;
+   margin-left: 2rem;
+   align-items: center; */
+
+
+}
+#filter{
+  /* margin-left: 1.5rem;
+  margin-top: 3 rem;
+  text-align: center; */
+  display: inline-block;
+  padding: 10px 15px;
+  margin-left: 0.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+@media (max-width: 668px) {
+  #filter {
+      
+      font: 1rem;
+      opacity: 0.5;
+  }
+  .filter-arrow-right,.filter-arrow-left{
+    width: 20px;
+  }
+
+}
+.filters::-webkit-scrollbar {
+  display: none; /* WebKit browsers */
+}
+#filter:hover{
+  opacity: 0.5;
+  
+}
+ 
+.tax-info{
+  display: none;
+}
+.form-switch{
+ border: 1px solid black;
+ border-radius: 1rem;
+  height: 3rem;
+  width: 11rem;
+  margin-left: 5rem;
+  align-items: center;
+  
+}
+ 
+.card {
+  transition: box-shadow 0.3s ease-in-out;
+  border: none;
+  border-radius: 1rem;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.img-fluid{
+  border-radius: 1rem;
+}
+.form-check-reverse {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+            /* Optional: adjust height as needed */
+      }
+      .form-check-label {
+          margin-right: 10px; /* Adjust space between label and input */
+      }
+      .card-img-container{
+        border-radius: 1rem;
+        height: 15rem;
+      }
+       
+      .card-img-container img {
+  object-fit: cover; /* This ensures the image covers the area without distortion */
+  border-radius: 1rem; /* Set the desired border-radius */
+  width: 100%; /* Ensures the image width fills the container */
+}
+.filter-arrow-container{
+display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.fa-chevron-left,.fa-chevron-right{
+font-size: 1.5rem;
+}
+.fa-chevron-right{
+  margin-left: 4rem;
+}
