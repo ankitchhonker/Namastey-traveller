@@ -92,11 +92,7 @@ app.get("/listings/category/:category",async(req,res)=>{
      
 });
 
-app.get("/listings/:search",async(req,res)=>{
-    let {searchValue}= req.params;
-    const alllistings = await Listings.find({searchValue});
-    res.render("/listing/index.js");
-})
+
  
 
 // Route middlewares

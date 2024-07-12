@@ -6,11 +6,11 @@
   }
  </style>
   
-   <%=success %>
+   
    <!-- <h2>All Listing Details</h2> -->
    <div class="filter-arrow-container">
     
-    <!-- <div  class="filter-arrow-left"><i class="fas fa-chevron-left"></i></div> -->
+   
 
     <div class="filters">
 
@@ -82,15 +82,18 @@
       </a>
 
       
-
+     
 
      </div>
+     <div  class="filter-arrow-right"><i class="fas fa-chevron-right"></i></div>
           
          <div class="form-check-reverse form-switch">
           <label class="form-check-label mb-3 " for="flexSwitchCheckDefault">Enable Taxes</label>
           <input class="form-check-input mb-1 " type="checkbox" role="switch" id="flexSwitchCheckDefault">
           
         </div>
+
+         
     
 </div>
      
@@ -98,8 +101,8 @@
    <div class="container">
       <div class="row">
         <% for(let listing of alllistings){ %>
-          <a href="/listings/<%= listing._id %>">
-          <div class="card  col-sm-6 col-md-4 col-lg-4 mb-4 mt-3 " >
+        
+          <div class="card  col-sm-6 col-md-4 col-lg-3 mb-4 mt-3 " >
             <div class="  h-100">
            
                <div class="card-img-container h-55">
@@ -113,13 +116,40 @@
               </div>
             </div>
           </div>
-        </a>
+      
         <% } %>
       </div>
     </div>
      
-    
-            
+    <script>
+      const Tax_switch = document.getElementById("flexSwitchCheckDefault");
+    const tax_info = document.getElementsByClassName("tax-info");
+    Tax_switch.addEventListener("click",()=>{
+      for(info of tax_info){
+        if(info.style.display!="inline"){
+         info.style.display="inline"
+      } else{
+        info.style.display="none"
+      }
+
+      }
+      
+    });
+
+    const filtersContainer = document.querySelector('.filters');
+    const arrowRight = document.querySelector('.filter-arrow-right');
+    const arrowLeft = document.querySelector(".filter-arrow-left");
+
+    arrowRight.addEventListener('click', () => {
+        // Scroll to the right by 200px (adjust as needed)
+        filtersContainer.scrollBy({ left: -100, behavior: 'smooth' });
+    });
+
+    arrowLeft.addEventListener("click",()=>{
+      filtersContainer.scrollBy({ left: 100, behavior: 'smooth' });
+    });
+
+    </script>
        
  
  

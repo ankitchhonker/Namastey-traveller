@@ -231,6 +231,7 @@ label{
 }
  
 .card {
+  
   transition: box-shadow 0.3s ease-in-out;
   border: none;
   border-radius: 1rem;
