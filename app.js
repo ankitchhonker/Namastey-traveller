@@ -10,17 +10,17 @@ const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const flash = require("connect-flash");
 const passport = require("passport");
-const LocalStrategy = require("passport-local").Strategy; // Fixed typo
+const LocalStrategy = require("passport-local").Strategy;  
 const User = require("./models/user.js");
-const userRoutes = require("./routes/user.js"); // Changed variable name to userRoutes
+const userRoutes = require("./routes/user.js"); 
 const initData = require("./init/init.js");
 const Listings = require("./models/listing.js");  
 const Reviews = require("./models/reveiws.js");
 const wrapAsync = require("./utils/WrapAsync.js");
 const ExpressError = require("./utils/ExpressError.js");
 const { listingSchema , reviewSchema } = require("./schema.js");
-const listingRoutes = require("./routes/listing.js"); // Changed variable name to listingRoutes
-const reviewRoutes = require("./routes/review.js"); // Changed variable name to reviewRoutes
+const listingRoutes = require("./routes/listing.js");  
+const reviewRoutes = require("./routes/review.js");  
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const { date } = require("joi");
@@ -62,7 +62,7 @@ app.use(flash());
 app.use(passport.initialize()); // Ensure this is before routes
 app.use(passport.session());    // Ensure this is before routes
 
-passport.use(new LocalStrategy(User.authenticate())); // Fixed typo
+passport.use(new LocalStrategy(User.authenticate()));  
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
