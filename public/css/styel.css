@@ -112,6 +112,7 @@
   background-color: white;
   border: none;
   margin-left: 100%;
+   
 }
  .fa-star{
   color: rgb(255, 217, 0);
@@ -123,15 +124,16 @@
 }
 
  .card-img-container {
-  height: 11rem;  
+  height: 13rem;  
+  width: 100%;
   overflow: hidden;
 }
  
  
  .card-img-top {
   height: 11rem;
-  width: 100%;
-border-radius: 1rem;
+  width: 21rem;
+ border-radius: 1rem;
 }
 
  
@@ -231,9 +233,9 @@ label{
 }
  
 .card {
-  
   transition: box-shadow 0.3s ease-in-out;
   border: none;
+  width: 18rem;
   border-radius: 1rem;
 }
 
@@ -274,3 +276,56 @@ font-size: 1.5rem;
 .fa-chevron-right{
   margin-left: 4rem;
 }
+ 
+ .card{
+  border: none;
+ }
+
+
+ .navbar-collapse {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-inp {
+  width: 100%;
+  height: 3rem;
+  border-radius: 25px;
+  text-align: center;
+  margin-right: 0.5rem;
+}
+
+.search-bar {
+  display: flex;
+  flex: 1;
+  max-width: 400px;
+}
+
+.search-btn {
+  background-color: #fe424d;
+  color: white;
+  margin-left: 0.4rem;
+  margin-top: 0.3rem;
+  border-radius:  0.8rem;
+   transform: rotate(90deg);
+}
+
+@media (max-width: 767.98px) {
+  .search-bar {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 1rem;
+  }
+
+  .navbar-collapse {
+    display: block;
+    background-color: aliceblue;
+  }
+
+  .navbar-nav.ms-auto {
+    margin-top: 1rem;
+  }
+}
+ .fa-star{
+  color: black;
+ }

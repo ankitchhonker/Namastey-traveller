@@ -25,6 +25,7 @@ module.exports.showListing=async (req, res) => {
     const listing = await Listings.findById(id).populate({path:"reviews",populate:{
    path:"author"
     }}).populate("owner");
+    console.log(listing);
     res.render("listing/show", { listing });
 }
 
