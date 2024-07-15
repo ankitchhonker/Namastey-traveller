@@ -53,7 +53,7 @@
   width: 100%;
   margin: 1rem;
  }
-
+   
  .img-div img{
   height: 50%;
   width: 60%;
@@ -86,7 +86,8 @@
   cursor: pointer;
   text-align: center;
 }
-
+.show-img{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;}
 .submit.edit {
   background-color:  #f44336;  
   color: white;
@@ -325,7 +326,59 @@ font-size: 1.5rem;
   .navbar-nav.ms-auto {
     margin-top: 1rem;
   }
+  .card-text {
+    font-size: small;
+  }
+  .allreview{
+    margin-top: 2rem;
+  }
+
+  .card-title{
+    font-size: small;
+  }
+   
+  .review-card{
+    display: flex;
+    width: 35rem;
+    height: 8rem;
+    border: 1px solid silver;
+  }
+  h3{
+    margin-top: 3rem;
+  }
+  #comment{
+    width: 12rem;
+  }
+  .leaves{
+    margin-top: 5rem;
+  }
+   
+  
 }
  .fa-star{
   color: black;
  }
+
+
+ .card{
+  border: none;
+}
+ 
+.wishlist-btn {
+background: none;
+border: none;
+outline: none;
+cursor: pointer;
+}
+
+.wishlist-btn .fa-heart {
+font-size: 24px;
+}
+
+.wishlist-btn .fa-heart.text-white {
+color: white;
+}
+
+.wishlist-btn .fa-heart.text-danger {
+color: red;
+}

@@ -73,22 +73,27 @@
       filtersContainer.scrollBy({ left: 100, behavior: 'smooth' });
     });
 
+   
+    
+    
+ 
     
     document.addEventListener('DOMContentLoaded', () => {
-      const likeButtons = document.querySelectorAll('.toggle-like');
-      
-      likeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          button.classList.toggle('btn-danger');
-          button.classList.toggle('btn-outline-danger');
+      document.querySelectorAll('.wishlist-btn').forEach(button => {
+        button.addEventListener('click', function () {
+          const icon = this.querySelector('i');
+          const isLiked = icon.classList.contains('text-danger');
+    
+          if (isLiked) {
+            icon.classList.remove('text-danger');
+            icon.classList.add('text-white');
+          } else {
+            icon.classList.remove('text-white');
+            icon.classList.add('text-danger');
+          }
         });
       });
     });
-    
-       
- 
-    
-    
 
 
     

@@ -1,16 +1,28 @@
- <% layout("layouts/boilerplate")%>
+   <% layout("layouts/boilerplate")%>
    <style>
     .card{
       border: none;
     }
-    .btn{
-      border: none;
-      font-size: 1.5rem;
-      color: white;
-    }
-     .toggle-like{
-      color: red;
-     }
+     
+    .wishlist-btn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.wishlist-btn .fa-heart {
+  font-size: 24px;
+}
+
+.wishlist-btn .fa-heart.text-white {
+  color: white;
+}
+
+.wishlist-btn .fa-heart.text-danger {
+  color: red;
+}
+
    </style>
    <!-- <h2>All Listing Details</h2> -->
    <div class="filter-arrow-container">
@@ -41,7 +53,11 @@
         </div>
   
       </a>
-      
+
+     
+       
+  
+      </a>
 
      <a href="/listings/category/Lakefronts">
       <div id="filter">
@@ -73,20 +89,10 @@
        </a>
 
         
-     
 
-      <a href="/listings/category/Castles">
-        <div id="filter">
-          <div><i class="fa-regular fa-castle"></i></div>
-          <p>Castles</p>
-        </div>
-      </a>
-
-      
-     
 
      </div>
-     <div  class="filter-arrow-right"><i class="fas fa-chevron-right"></i></div>
+     
           
          <div class="form-check-reverse form-switch">
           <label class="form-check-label mb-3 " for="flexSwitchCheckDefault">Enable Taxes</label>
@@ -134,10 +140,9 @@
                 <a href="/listings/<%= listing._id %>">
                   <img src="<%= listing.image.url %>" class="card-img-top img-fluid" alt="image">
                 </a>
-                <button class="btn btn-outline-danger position-absolute top-0 end-0 m-2 toggle-like" aria-label="Like">
-                  <i class="fa fa-heart"></i>
+                <button class="wishlist-btn position-absolute top-0 end-0 m-2" aria-label="Like">
+                  <i class="fa fa-heart text-white"></i>
                 </button>
-
               </div>
               <div class="card-body d-flex flex-column">
                 <a href="/listings/<%= listing._id %>">
@@ -153,7 +158,25 @@
       </div>
     </div>
     
-    <script src="../js/script"></script>
+    <script>
+    
+    document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.wishlist-btn').forEach(button => {
+    button.addEventListener('click', function () {
+      const icon = this.querySelector('i');
+      const isLiked = icon.classList.contains('text-danger');
+
+      if (isLiked) {
+        icon.classList.remove('text-danger');
+        icon.classList.add('text-white');
+      } else {
+        icon.classList.remove('text-white');
+        icon.classList.add('text-danger');
+      }
+    });
+  });
+});
+    </script>
      
     
  

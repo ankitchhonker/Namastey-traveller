@@ -95,6 +95,8 @@ app.get("/listings/category/:category",async(req,res)=>{
 
  
 
+ 
+
 // Route middlewares
 app.use("/listings", listingRoutes);
 app.use("/listings/:id/reviews", reviewRoutes);

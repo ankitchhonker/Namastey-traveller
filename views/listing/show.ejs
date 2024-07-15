@@ -1,16 +1,61 @@
 <% layout("/layouts/boilerplate") %>
+<style>
+    .review-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 70%;
+    height: 7rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+
+  .review-card:hover {
+    transform: scale(1.05);
+  }
+
+  .review-card .card-body {
+    padding: 20px;
+  }
+
+  .review-card .card-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+
+  .review-card .card-text {
+    font-size: 1em;
+    color: #555;
+  }
+
+  .review-card .fa-star {
+    color: #f39c12;
+  }
+
+  .review-card .review-delete {
+    background: transparent;
+    border: none;
+    color: #dc3545;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+
+  .review-card .review-delete:hover {
+    color: #c82333;
+  }
+</style>
 
 <body>
     <h3>Listing Details</h3>
     <div class="img-div">
-        <img src="<%= listing.image.url %>" alt="Image listing">
+         <img src="<%= listing.image.url %>" alt="Image listing" class="show-img"> 
         <b>
             <p><%= listing.title %></p>
         </b>
         <p>owned by <i><b><%=listing.owner.username %></b></i></p>
         <p><%= listing.description %></p>
         <p>₹<%= listing.price.toLocaleString("en-IN") %></p>
-        <p><%= listing.location %></p>
+        <p><i class="fa-sharp fa-solid fa-location-dot"></i> &nbsp; <%= listing.location %></p>
         <p><%= listing.country %></p>
         <% if (reqUser && listing.owner._id.equals(reqUser._id)) { %>
         <div class="btn-div">
@@ -25,7 +70,7 @@
         <hr>
     </div>
    
-    <div class="mb-2">
+    <div class="mb-2 leaves">
         <% if (reqUser) { %>
             <br>
             <br><br>
@@ -59,27 +104,26 @@
             <button class="btn btn-outline-dark mt-3">submit</button>
         </form>
         <% } %>
-        <p><b>All Reviews</b></p>
+        <p class="allreview"><b>All Reviews</b></p>
         <div class="row">
             <% for (review of listing.reviews) { %>
-            <div class=" review-card col-4 m-1 h-5">
-                <div class="card-body review-card">
-                    <h class="card-title"><b>@<%= review.author.username %></b></p>
-                    <p class="card-text"><%= review.comment %></p>
-             
-                    <!-- <p class="starability-result" data-rating="<%= review.rating  %>"> </p> -->
-                     <% for(let i=0; i<parseInt(review.rating);i++) {%>
-                        <i class="fa-sharp fa-solid fa-star"></i>
-                        <% } %>
-                        
-                     
-
-                    <form method="post" action="/listings/<%= listing.id %>/reviews/<%= review.id %>?_method=delete">
-                        <button class="review-delete"><i class="fa-sharp fa-solid fa-trash"></i></button>
-                    </form>
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+              <div class="review-card h-100">
+                <div class="card-body">
+                  <h5 class="card-title"><b>@<%= review.author.username %></b></h5>
+                  <p class="card-text"><%= review.comment %></p>
+                  <div>
+                    <% for(let i=0; i<parseInt(review.rating);i++) { %>
+                    <i class="fa-sharp fa-solid fa-star"></i>
+                    <% } %>
+                  </div>
+                  <form method="post" action="/listings/<%= listing.id %>/reviews/<%= review.id %>?_method=delete" class="mt-2">
+                    <button class="review-delete"><i class="fa-sharp fa-solid fa-trash"></i></button>
+                  </form>
                 </div>
+              </div>
             </div>
             <% } %>
-        </div>
+          </div>
     </div>
 </body>
