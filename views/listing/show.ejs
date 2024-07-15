@@ -55,7 +55,7 @@
         <p>owned by <i><b><%=listing.owner.username %></b></i></p>
         <p><%= listing.description %></p>
         <p>₹<%= listing.price.toLocaleString("en-IN") %></p>
-        <p><i class="fa-sharp fa-solid fa-location-dot"></i> &nbsp; <%= listing.location %></p>
+        <p><a href="https://www.google.com/search?q=<%= listing.title %> &nbsp;<%= listing.location  %>" target="_blank">Let's Go <i class="fa-sharp fa-solid fa-location-dot"></i></a> &nbsp; <%= listing.location %></p>
         <p><%= listing.country %></p>
         <% if (reqUser && listing.owner._id.equals(reqUser._id)) { %>
         <div class="btn-div">
