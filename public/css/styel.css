@@ -216,7 +216,7 @@ label{
   display: none; /* WebKit browsers */
 }
 #filter:hover{
-  opacity: 0.5;
+  opacity: 1;
   
 }
  
