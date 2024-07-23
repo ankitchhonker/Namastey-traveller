@@ -205,7 +205,7 @@ label{
   #filter {
       
       font: 1rem;
-      opacity: 0.5;
+      opacity: 1;
   }
   .filter-arrow-right,.filter-arrow-left{
     width: 20px;
