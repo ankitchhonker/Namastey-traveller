@@ -25,7 +25,7 @@ module.exports.CreateListing=async (req, res, next) => {
     const newlisting = new Listings(req.body.listing);
     newlisting.owner = req.user;
     newlisting.image = {url,filename};
-    newListing.geometry = response.body.features[0].geometry;
+    newlisting.geometry = response.body.features[0].geometry;
     await newlisting.save();
     req.flash("success", "Your listing has been added");
     res.redirect("/listings");
