@@ -13,7 +13,6 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;  
 const User = require("./models/user.js");
 const userRoutes = require("./routes/user.js"); 
-const initData = require("./init/init.js");
 const Listings = require("./models/listing.js");  
 const Reviews = require("./models/reveiws.js");
 const wrapAsync = require("./utils/WrapAsync.js");
@@ -94,6 +93,26 @@ app.get("/listings/category/:category",async(req,res)=>{
     res.render("listing/index.ejs",{alllistings});
      
 });
+
+app.get("/listings/search/:searchValue",async(req,res)=>{
+    const searchTerm = req.query.searchTerm;
+    const query = {
+        $or: [
+          { title: new RegExp(searchTerm, 'i') }, 
+          { location: new RegExp(searchTerm, 'i') },  
+          { country: new RegExp(searchTerm, 'i') },  
+          { description: new RegExp(searchTerm, 'i') }  
+        ]
+      };
+      try {
+         
+        const alllistings = await Listings.find(query);
+        res.render("listing/index.ejs", { alllistings });
+      } catch (error) {
+        next(error);  
+      }
+    
+})
 
 
 

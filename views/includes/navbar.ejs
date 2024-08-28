@@ -88,9 +88,14 @@ h2{
         <div class="navbar-nav">
           <a class="nav-link" href="/listings">Explore</a>
         </div>
-        <div class="search-bar ms-auto d-flex">
-          <input type="text" id="searchValue" class="search-inp form-control" placeholder="Search your destination..">
-          <button class="search-btn btn"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+        <div class="search-bar ms-auto  ">
+          
+          <form class="form-inline my-2 my-lg-0 d-flex align-items-center" action="/listings/search/:searchValue">
+            <input class="form-control mr-2 mb-3" type="search" name="searchTerm" placeholder="Enter place, location, country etc" aria-label="Search">
+            <button class="btn btn-outline-danger my-2 my-sm-0 ms-2" type="submit">Search</button>
+          </form>
+          
+          
         </div>
         <div class="navbar-nav ms-auto">
           <a class="nav-link" href="/listings/new">Add your home</a>
@@ -105,5 +110,9 @@ h2{
       </div>
     </div>
   </nav>
-  
+  <script>
+    const input = document.getElementsByClassName("search-inp");
+
+
+  </script>
    
