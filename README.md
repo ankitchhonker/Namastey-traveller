@@ -3,9 +3,9 @@ Here's a detailed README template for your project:
 
 ---
 
-# **StayHub - Your Travel Companion**
+# **Namastey Travellers - 
 
-Welcome to **StayHub**, an Airbnb-inspired platform where users can explore unique places for their stay and add their own listings for rent. The platform is designed to offer an interactive experience with map-based location viewing.
+Welcome to **Namastey Travells**, an Airbnb-inspired platform where users can explore unique places for their stay and add their own listings for rent. The platform is designed to offer an interactive experience with map-based location viewing.
 
 ## **Table of Contents**
 - [Features](#features)
