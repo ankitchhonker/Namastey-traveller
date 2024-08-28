@@ -311,16 +311,27 @@ font-size: 1.5rem;
    transform: rotate(90deg);
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 767px) {
   .search-bar {
     width: 100%;
     max-width: none;
     margin-bottom: 1rem;
-  }
-
+  
+    #map{
+      margin: 3rem;
+      height: 300px !important;
+   }
+   #mapBox{
+     padding: 0px !important;
+     margin-top: 90px;
+   }}
+   
   .navbar-collapse {
     display: block;
     background-color: aliceblue;
+  }
+  .btn-div{
+    margin-bottom: 50px;
   }
 
   .navbar-nav.ms-auto {
@@ -382,3 +393,24 @@ color: white;
 .wishlist-btn .fa-heart.text-danger {
 color: red;
 }
+
+#map{
+  height: 400px;
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 128, 0, 0.428);
+  }
+  @media (max-width: 767px){
+    .edit-btn{
+       width: 4rem !important;
+    }   
+    #map{
+       height: 300px !important;
+    }
+    #mapBox{
+      padding: 0px !important;
+    }
+    /* .mapboxgl-ctrl-fullscreen {
+      display: none !important; /* Hide the control 
+    } */
+    }

@@ -59,8 +59,8 @@ const sessionOptions = {
 
 app.use(session(sessionOptions));
 app.use(flash());
-app.use(passport.initialize()); // Ensure this is before routes
-app.use(passport.session());    // Ensure this is before routes
+app.use(passport.initialize()); 
+app.use(passport.session());   
 
 passport.use(new LocalStrategy(User.authenticate()));  
 passport.serializeUser(User.serializeUser());
@@ -83,6 +83,9 @@ main().catch((err) => {
     console.log(err);
 });
 
+
+//filter Route
+
 app.get("/listings/category/:category",async(req,res)=>{
     
     let {category} = req.params;
@@ -93,9 +96,6 @@ app.get("/listings/category/:category",async(req,res)=>{
 });
 
 
- 
-
- 
 
 // Route middlewares
 app.use("/listings", listingRoutes);
