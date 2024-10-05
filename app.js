@@ -100,7 +100,8 @@ app.get("/listings/search/:searchValue",async(req,res)=>{
         $or: [
           { title: new RegExp(searchTerm, 'i') }, 
           { location: new RegExp(searchTerm, 'i') },  
-          { country: new RegExp(searchTerm, 'i') },  
+          { country: new RegExp(searchTerm, 'i') }, 
+          { category: new RegExp(searchTerm, 'i') }  ,
           { description: new RegExp(searchTerm, 'i') }  
         ]
       };
