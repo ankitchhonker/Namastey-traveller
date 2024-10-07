@@ -57,8 +57,8 @@ Welcome to **Namastey Travells**, an Airbnb-inspired platform where users can ex
 ## **Installation**
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/stayhub.git
-    cd stayhub
+    git clone https://github.com/yourusername/Namastey-Travellers.git
+    cd Namastey-Travellers
     ```
 
 2. **Install dependencies:**
@@ -77,15 +77,19 @@ Welcome to **Namastey Travells**, an Airbnb-inspired platform where users can ex
 
 4. **Start the application:**
     ```bash
-    npm start
+    nodemon or nodemon app.js
+
     ```
-   The application will be available at `http://localhost:3000`.
+   The application will be available atNamastey-Travellers8080`.
 
 ## **Usage**
 - **Explore Listings:** Visit the homepage to browse available listings.
 - **Create an Account:** Sign up to add your own listings.
 - **Add a Listing:** Once logged in, navigate to the "Add Listing" section to post your property.
 - **View Map:** Each listing has an integrated map for precise location viewing.
+**search functionality** fuuly search functionality available user can find listing using search .
+  **Filter** filter based category also available...
+
 
 ## **Project Structure**
 ```plaintext
