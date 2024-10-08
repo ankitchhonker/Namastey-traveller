@@ -48,7 +48,7 @@ Welcome to **Namastey Travells**, an Airbnb-inspired platform where users can ex
   - Joi
   
 - **Deployment**: 
-  - Heroku
+  - render
 
 ## **Installation**
 1. **Clone the repository:**
