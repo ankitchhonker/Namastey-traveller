@@ -1,8 +1,4 @@
- 
-Here's a detailed README template for your project:
-
----
-
+**About  Project**
 # **Namastey Travellers - 
 
 Welcome to **Namastey Travells**, an Airbnb-inspired platform where users can explore unique places for their stay and add their own listings for rent. The platform is designed to offer an interactive experience with map-based location viewing.
